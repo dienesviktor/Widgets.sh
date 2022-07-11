@@ -1,8 +1,6 @@
 #!/bin/bash
-chmod 755 *
 
-export WIDGET_CONTROL="mem, cpu, proc, user, disk, battery"
-
+main() {
 if [ -z ${WIDGET_CONTROL+x} ];
   then
       ./mem.sh
@@ -40,3 +38,6 @@ if [ -z ${WIDGET_CONTROL+x} ];
           echo ""
       fi
   fi
+}
+
+main
